@@ -65,15 +65,20 @@ namespace examples
             IEnumerable<Edge<string>> path;
             if (tryGetPath(to, out path))
             {
-                Console.Write("Path found from {0} to {1}: {0}", @from, to);
-                foreach (var e in path)
-                    Console.Write(string.Format(" > {0}", e.Target));
-                Console.WriteLine();
+                PrintPath(@from, to, path);
             }
             else
             {
                 Console.WriteLine("No path found from {0} to {1}.");
             }
+        }
+
+        private static void PrintPath(string @from, string to, IEnumerable<Edge<string>> path)
+        {
+            Console.Write("Path found from {0} to {1}: {0}", @from, to);
+            foreach (var e in path)
+                Console.Write(" > {0}", e.Target);
+            Console.WriteLine();
         }
     }
 }
