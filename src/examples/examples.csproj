@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculateDistance.cs" />
+    <Compile Include="FindAPath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\Visualizer.cs" />
   </ItemGroup>
