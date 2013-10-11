@@ -60,7 +60,7 @@ namespace examples.Support
             File.WriteAllText(output, dot);
 
             // assumes dot.exe is on the path:
-            var args = string.Format(@"{0} -Tjpg c:\temp\products.dot -O", output);
+            var args = string.Format(@"{0} -Tjpg -O", output);
             System.Diagnostics.Process.Start("dot.exe", args);
             return output;
         }
